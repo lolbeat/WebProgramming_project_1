@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en-UK" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>404 Not Found</title>
+
+    <!-- Bootstrap4 stylesheet -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- External CSS file for complete web-site -->
+    <link rel="stylesheet" href="styles_books.css">
+    <!-- External CSS file (SASS) for complete web-site -->
+    <link rel="stylesheet" href="styles_books_sass.css">
+    <!-- Internal page CSS within head -->
+    <style>
+      body {background-color: powderBlue;}
+      h1   {color: Blue;}
+      p    {color: Grey;}
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <br>
+      <br>
+      <br>
+      <h1>Not Found</h1>
+      <a href="{{ url_for('index') }}"><p>Click Here</a> To go to the Home Page</p>
+    </div>
+  </body>
+</html>

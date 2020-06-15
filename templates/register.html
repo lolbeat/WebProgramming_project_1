@@ -1,0 +1,37 @@
+{% extends "books_base.html" %}
+{% block my_content %}
+
+<!-- TO BE ADDED -->
+<!-- register for membership via form with userID/email address, given & family names & password  -->
+
+<div class="container">
+  <h3>Registration will take just 2 shakes of a lamb's tail</h3>
+  <br>
+  <form action="" method="post">
+
+    <input type="text" placeholder="John.Doe@email.com" name="username" value="{{
+      request.form.username }}">
+    <label for="username">Email Address (User ID)</label><br>
+    <input type="text" placeholder="John" name="name_given" value="{{
+        request.form.name_given }}">
+    <label for="name_given">First/Given Name</label><br>
+    <input type="text" placeholder="Doe" name="name_family" value="{{
+          request.form.name_family }}">
+    <label for="name_family">Second/Family Name</label><br>
+    <input type="password" placeholder="..." name="password1" value="{{
+      request.form.password1 }}">
+    <label for="password1">Create a password</label><br>
+    <input type="password" placeholder="..." name="password2" value="{{
+        request.form.password2 }}">
+    <label for="password2">Verify password</label>
+    <br><br>
+    <input class="btn btn-default" type="submit" value="Register">
+    <br>
+  </form>
+  {% if error %}
+    <p class="error"><strong>Error:</strong> {{ error }}
+    <br>
+  {% endif %}
+</div>
+
+{% endblock %}

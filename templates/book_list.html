@@ -1,0 +1,24 @@
+{% extends "books_base.html" %}
+{% block my_content %}
+
+<<h2>Book Details</h2>
+<br>
+
+<!-- TO BE ADDED -->
+<!-- 1) book info (title, author, publication year, ISBN -->
+<!-- 2) book reviews from this site's users -->
+<!-- 3) this user's review of this book (one time only!!!) -->
+<!-- 4) Number of 'Goodread' ratings and average rating -->
+
+
+<ul>
+    {% for book in book_list %}
+        <li>
+            <a href="{{ url_for('book', isbn=book.isbn) }}">
+                {{ book.title }} by {{ book.author }}
+            </a>
+        </li>
+    {% endfor %}
+</ul>
+
+{% endblock %}

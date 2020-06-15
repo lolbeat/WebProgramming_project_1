@@ -1,0 +1,93 @@
+* {
+  box-sizing: border-box;
+}
+
+/* Create four equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 25%;
+  padding: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* On screens that are 992px wide or less, go from four columns to two columns */
+@media screen and (max-width: 992px) {
+  .column {
+    width: 50%;
+  }
+}
+
+/* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+
+body {
+  background-color: MintCream;
+}
+
+h1 {
+  color: DarkSlateBlue;
+}
+
+p {
+  color: DarkSlateGrey;
+  border: 1px solid powderblue;
+  padding: 30px;
+}
+
+div[class="MainText"] {
+  background-color:Grey;
+  padding:20px;
+}
+
+table, th, td {
+  border: 2px solid black;
+}
+
+/* change register ID */
+#change_register01 {
+  color: blue;
+  font-weight: bolder;
+  font-style:oblique;
+  font-stretch:extra-condensed;
+}
+
+/* classes for sections pending actions by author */
+p.pending_update {
+  color: red;
+  font-stretch: extra-expanded;
+}
+
+p.pending_review {
+  color: purple;
+  font-style: italic;
+}
+
+/* if pending review OR pending update then set yellow background */
+p[class*="pending"] {
+  background: #ffff00;
+}
+
+a:hover {
+  color: DarkSlateBlue
+}
+
+/* special headers */
+h6 {
+  background-color: yellow;
+}
+
+/* user selection */
+::selection {
+  color: red;
+  background: yellow;
+}

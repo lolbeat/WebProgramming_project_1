@@ -1,0 +1,27 @@
+{% extends "books_base.html" %}
+{% block my_content %}
+
+<h2>Search for a good read...</h2>
+<br>
+<!-- TO BE ADDED -->
+
+<div class="container">
+  <h4>Your Search</h4>
+  <br>
+  <form action="" method="post">
+    <input type="text" placeholder="title" name="book_title" value="{{
+      request.form.book_title }}">
+     <input type="text" placeholder="author" name="book_author" value="{{
+      request.form.book_author }}">
+      <input type="text" placeholder="isbn" name="book_isbn" value="{{
+       request.form.book_isbn }}">
+    <input class="btn btn-default" type="submit" value="Find my book...">
+  </form>
+  {% if error %}
+    <p class="error"><strong>Error:</strong> {{ error }}
+    <br>
+  {% endif %}
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en-UK" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>project1_books_base</title>
+
+    <!-- Bootstrap4 stylesheet -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- External CSS file for complete web-site -->
+    <link rel="stylesheet" href="styles_books.css">
+    <!-- External CSS file (SASS) for complete web-site -->
+    <link rel="stylesheet" href="styles_books_sass.css">
+    <!-- Internal page CSS within head -->
+    <style>
+      body {background-color: powderBlue;}
+      h1   {color: Blue;}
+      p    {color: Grey;}
+    </style>
+
+  </head>
+  <body>
+    <div class="container">
+      <p><img src="/static/booksearch.jpg" alt="book search image" style="float:right;width:150px;height:150px;">
+      <h1>C2C.com</h1> Cover-to-Cover is a book community for those of us who love to explore the wonderful world of fictional and non-fictional writing.
+      See how other members rated their reads, and use their detailed reviews to help you decide where to invest your valuable reading time.
+      We also share with you what the huge membership of <b>goodReads</b> thought of their books by showing you the average ratings for books they read.
+      <br>Search by book title, author, and ISBN. Submit your own book reviews and ratings to help others choose their next novel.
+      <br>
+      <br>
+      <a href="/search">Search</a> for a book or <a href="/logout">logout</a></p>
+      <br>
+
+      {% for message in get_flashed_messages() %}
+        <strong>{{ message }}</strong><br><br>
+      {% endfor %}
+
+      <!-- child template -->
+      {% block my_content %} {% endblock %}
+
+    </div>
+
+  </body>
+</html>

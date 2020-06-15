@@ -1,0 +1,43 @@
+{% extends "books_base.html" %}
+{% block my_content %}
+
+
+<!-- TO BE ADDED -->
+
+<!-- 2) book reviews from this site's users -->
+<!-- 3) this user's review of this book (one time only!!!) -->
+<h3>Book Details</h3>
+<ul>
+    <li>Title: {{ book_info.title }}</li>
+    <li>Author: {{ book_info.author }}</li>
+    <li>Published: {{ book_info.year }}</li>
+    <li>ISBN: {{ book_info.isbn }}</li>
+</ul>
+<!-- add a review -->
+<a href="{{ url_for('review', isbn=book_info.isbn) }}">Add your own review of
+    {{ book_info.author }}'s book '{{ book_info.title }}'
+</a>
+<br>
+<br>
+<br>
+<h3 style=font-family:'Nimbus Sans Novus;'>good<b>reads</b></h3>
+<h4 style=font-family:'Arial Narrow;'>Readers' Reviews</h4>
+<p>Average Rating: {{ average_rating }} Number of Reviews: {{ratings_count}}</p>
+<br>
+<h2>What our members thought of this book...</h2>
+<ol>
+    {% for review in reviews %}
+      <br>
+      <li>
+        User    :<b>{{ review.user_id }}</b><br>
+        Rating  :<b>{{ review.user_rating }}</b><br>
+        Review  :{{ review.review_text }}<br>
+        Date    :{{ review.review_date }}<br>
+      </li>
+    {% else %}
+        <li>No one has reviewed this book yet...Be the first !</li>
+    {% endfor %}
+</ol>
+
+
+{% endblock %}

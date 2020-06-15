@@ -1,0 +1,57 @@
+/* SCSS variables */
+$list_color: black;
+$nav_color: white;
+$nav_bkcolor: Blue;
+$pending_bkcolor: #ffff00;
+
+ul {
+  color:$list_color;
+}
+
+ol {
+  color:$list_color;
+}
+
+p[class*="pending"] {
+  background: $pending_bkcolor;
+}
+
+a[class="Nav_btn"] {
+  color: $nav_color;
+  background: $nav_bkcolor;
+}
+
+/* nested SASS */
+table {
+  caption {
+    color: blue;
+  }
+    tr {
+      th{
+        color: DarkSlateBlue;
+      }
+      td{
+        color:DarkSlateGrey;
+      }
+    }
+}
+
+/* inherited message box */
+%info_msg {
+  font-family: sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  border: 3px solid black;
+  padding: 20px;
+  margin: 20px;
+}
+
+.procurement_msg {
+  @extend %info_msg;
+  background-color: grey;
+}
+
+.warning_msg {
+  @extend %info_msg;
+  background-color: red;
+}

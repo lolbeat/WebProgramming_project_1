@@ -1,0 +1,55 @@
+/* SCSS variables */
+ul {
+  color: black;
+}
+
+ol {
+  color: black;
+}
+
+p[class*=pending] {
+  background: #ffff00;
+}
+
+a[class=Nav_btn] {
+  color: white;
+  background: Blue;
+}
+
+/* nested SASS */
+table caption {
+  color: blue;
+}
+table tr th {
+  color: DarkSlateBlue;
+}
+table tr td {
+  color: DarkSlateGrey;
+}
+
+/* inherited message box */
+.warning_msg, .procurement_msg {
+  font-family: sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  border: 3px solid black;
+  padding: 20px;
+  margin: 20px;
+}
+
+.procurement_msg {
+  background-color: grey;
+}
+
+.warning_msg {
+  background-color: red;
+}
+
+.'btn btn-default' {
+  text-transform: uppercase;
+  padding: 5px;
+  color: blue;
+  font-weight: bold;
+  background-color: white;
+}
+/*# sourceMappingURL=styles_robot_sass.css.map */
